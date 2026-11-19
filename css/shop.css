@@ -1,0 +1,123 @@
+
+/* =================================
+   NOVA STORE — SHOP PAGE
+================================= */
+
+/* Shop Introduction */
+
+.shop-intro {
+    text-align: center;
+    padding: 90px 20px 75px;
+    background-color: #F0EDE6;
+}
+
+.shop-intro .eyebrow {
+    color: var(--color-gray);
+    margin-bottom: 15px;
+}
+
+.shop-intro h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.shop-intro > p:last-child {
+    color: var(--color-gray);
+    font-size: 13px;
+}
+
+/* Shop Container */
+
+.shop-container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 65px 35px 100px;
+}
+
+/* Toolbar */
+
+.shop-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+
+.shop-results {
+    font-size: 12px;
+    color: var(--color-gray);
+}
+
+.shop-controls {
+    display: flex;
+    gap: 12px;
+}
+
+.shop-controls input,
+.shop-controls select {
+    min-height: 44px;
+    padding: 0 14px;
+    background-color: transparent;
+    border: 1px solid #D6D0C6;
+    border-radius: 0;
+    color: var(--color-black);
+    font-family: var(--font-body);
+    font-size: 12px;
+    outline: none;
+}
+
+.shop-controls input {
+    width: 190px;
+}
+
+.shop-controls select {
+    cursor: pointer;
+}
+
+.shop-controls input:focus,
+.shop-controls select:focus {
+    border-color: var(--color-black);
+}
+
+/* Product Grid */
+
+.shop-product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 45px 22px;
+}
+
+/* Product Cards */
+
+.shop-product-grid .product-card img {
+    height: 330px;
+}
+
+.shop-product-grid .product-info h3 a:hover {
+    color: #A68B67;
+}
+
+/* Empty Search Results */
+
+.no-products {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.no-products h2 {
+    font-family: var(--font-heading);
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.no-products p {
+    color: var(--color-gray);
+    font-size: 13px;
+}

@@ -1,0 +1,312 @@
+
+/* =================================
+   NOVA STORE - SHOPPING CART
+================================= */
+
+.cart-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 65px 5%;
+    min-height: 65vh;
+}
+
+/* PAGE HEADING */
+
+.cart-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 45px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e8e5e1;
+}
+
+.cart-heading h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 400;
+    color: #171717;
+}
+
+.cart-heading a {
+    color: #777;
+    font-size: 12px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.cart-heading a:hover {
+    color: #9b8063;
+}
+
+/* CART CONTAINER */
+
+#cart-container {
+    width: 100%;
+}
+
+/* CART ITEM */
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 130px 1fr auto;
+    gap: 30px;
+    align-items: center;
+    padding: 28px 0;
+    border-bottom: 1px solid #eee9e3;
+}
+
+.cart-item-image {
+    width: 130px;
+    height: 155px;
+    object-fit: cover;
+    background: #f4f1ed;
+}
+
+.cart-item-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: #171717;
+}
+
+.cart-item-info p {
+    color: #888;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.cart-item-info p:first-of-type {
+    color: #171717;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* ITEM ACTIONS */
+
+.cart-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-top: 18px;
+}
+
+.cart-item-actions label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #777;
+    font-size: 12px;
+}
+
+.cart-quantity {
+    width: 55px;
+    padding: 8px;
+    border: 1px solid #ddd5cb;
+    background: #fff;
+    font-size: 13px;
+    text-align: center;
+    outline: none;
+}
+
+.cart-quantity:focus {
+    border-color: #9b8063;
+}
+
+.remove-item {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 11px;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.remove-item:hover {
+    color: #a33;
+}
+
+/* ITEM TOTAL */
+
+.cart-item-total {
+    font-size: 14px;
+    font-weight: 600;
+    color: #171717;
+    white-space: nowrap;
+}
+
+/* ORDER SUMMARY */
+
+.cart-summary {
+    max-width: 380px;
+    margin: 45px 0 0 auto;
+    padding: 28px;
+    background: #f8f6f3;
+}
+
+.cart-summary h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    padding-top: 18px;
+    border-top: 1px solid #e3ded7;
+    font-size: 14px;
+}
+
+.cart-total strong {
+    font-size: 17px;
+    color: #171717;
+}
+
+/* CHECKOUT BUTTON */
+
+.checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    background: #171717;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.checkout-btn:hover {
+    background: #9b8063;
+}
+
+/* EMPTY CART */
+
+.empty-cart {
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.empty-cart h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.empty-cart p {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+.empty-cart a {
+    display: inline-block;
+    width: auto;
+    padding: 16px 32px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    .cart-page {
+        padding: 45px 5%;
+    }
+
+    .cart-heading {
+        margin-bottom: 25px;
+    }
+
+    .cart-heading h1 {
+        font-size: 29px;
+    }
+
+    .cart-item {
+        grid-template-columns: 95px 1fr;
+        gap: 18px;
+        position: relative;
+        padding: 22px 0;
+    }
+
+    .cart-item-image {
+        width: 95px;
+        height: 120px;
+    }
+
+    .cart-item-info h3 {
+        font-size: 17px;
+    }
+
+    .cart-item-total {
+        grid-column: 2;
+        margin-top: -5px;
+    }
+
+    .cart-item-actions {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .cart-summary {
+        max-width: 100%;
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .cart-heading h1 {
+        font-size: 25px;
+    }
+
+    .cart-item {
+        grid-template-columns: 80px 1fr;
+        gap: 13px;
+    }
+
+    .cart-item-image {
+        width: 80px;
+        height: 105px;
+    }
+
+    .cart-item-actions {
+        gap: 10px;
+    }
+}
+
+
+/* DELIVERY NOTE + WHATSAPP */
+
+.cart-note {
+    margin: -10px 0 20px;
+    color: #888;
+    font-size: 12px;
+}
+
+.whatsapp-btn {
+    display: block;
+    margin-top: 12px;
+    padding: 16px;
+    border: 1px solid #171717;
+    color: #171717;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background: #171717;
+    color: #fff;
+}
